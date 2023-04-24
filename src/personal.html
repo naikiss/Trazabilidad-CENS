@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>personal</title>
+
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <!-- Aún no pongo la barra search -->
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <!-- Saldrá el nombre del usuario ingresado aquí cuando se implemente la bd -->
+        <div class="header-right">
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <img
+            class="mb-4"
+            id="logo"
+            src="../img/logo.png"
+            alt=""
+            width="145"
+            height="107"
+          />
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="dashboard.html" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="licitaciones.html" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span>
+              Licitaciones
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="proceso.html" target="_blank">
+              <span class="material-icons-outlined">analytics</span> Proceso
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="personal.html" target="_blank">
+              <span class="material-icons-outlined">shopping_cart</span>
+              Personal
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="reportes.html" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reportes
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="configuracion.html" target="_blank">
+              <span class="material-icons-outlined">settings</span>
+              Configuración
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <h1>El personal registrado con sus respectivos roles</h1>
+      </main>
+      <!-- End Main -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

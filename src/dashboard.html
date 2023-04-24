@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <!-- Aún no pongo la barra search -->
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <!-- Saldrá el nombre del usuario ingresado aquí cuando se implemente la bd -->
+        <div class="header-right">
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <img class="mb-4" id="logo" src="../img/logo.png" alt="" width="145" height="107">
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="dashboard.html" target="_blank">
+              <span class="material-icons-outlined">dashboard</span> Dashboard
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="licitaciones.html" target="_blank">
+              <span class="material-icons-outlined">inventory_2</span>
+              Licitaciones
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="proceso.html" target="_blank">
+              <span class="material-icons-outlined">analytics</span> Proceso
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="personal.html" target="_blank">
+              <span class="material-icons-outlined">shopping_cart</span>
+              Personal
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="reportes.html" target="_blank">
+              <span class="material-icons-outlined">poll</span> Reportes
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="configuracion.html" target="_blank">
+              <span class="material-icons-outlined">settings</span>
+              Configuración
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">LICITACIONES</p>
+              <span class="material-icons-outlined text-blue">inventory_2</span>
+            </div>
+            <span class="text-primary font-weight-bold">249</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PROCESO</p>
+              <span class="material-icons-outlined text-orange"
+                >analytics</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">83</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">PERSONAL</p>
+              <span class="material-icons-outlined text-green"
+                >groups</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">79</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">REPORTES</p>
+              <span class="material-icons-outlined text-red"
+                >notification_important</span
+              >
+            </div>
+            <span class="text-primary font-weight-bold">56</span>
+          </div>
+        </div>
+
+        <div class="Prestamos">
+          <div class="charts-card">
+            <p class="chart-title">ULTIMAS LICITACIONES JIJ IJ IJA</p>
+            
+            
+            <div id="bar-chart">
+            
+
+              <div class="table-responsive">
+                <table class="table table-striped
+                table-hover	
+                table-borderless
+                table-primary
+                align-middle">
+                  <thead class="table-light">
+                    <caption>Tabla de ejemplo</caption>
+                    <tr>
+                      <th>Column 1</th>
+                      <th>Column 2</th>
+                      <th>Column 3</th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                      <tr class="table-primary" >
+                        <td scope="row">Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                      </tr>
+                      <tr class="table-primary">
+                        <td scope="row">Item</td>
+                        <td>Item</td>
+                        <td>Item</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      
+                    </tfoot>
+                </table>
+              </div>
+              
+
+
+            </div>
+          </div>
+      </main>
+      <!-- End Main -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

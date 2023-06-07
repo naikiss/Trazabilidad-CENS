@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>prestamo</title>
+
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/bateria.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+
+        <!-- Aún no pongo la barra search -->
+        <div class="header-left">
+          <span class="material-icons-outlined">search</span>
+        </div>
+        <!-- Saldrá el nombre del usuario ingresado aquí cuando se implemente la bd -->
+        <div class="header-right">
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <img
+            class="mb-4"
+            id="logo"
+            src="../img/logo.png"
+            alt=""
+            width="145"
+            height="107"
+          />
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+
+            <a href="dashboard.html" target="" class="a-link">
+              <li class="sidebar-list-item">
+                <span class="material-icons-outlined">dashboard</span> Dashboard
+              </li>
+            </a>
+  
+            <a href="licitaciones.html" target="" class="a-link">
+            <li class="sidebar-list-item">            
+                <span class="material-icons-outlined">inventory_2</span>
+                Licitaciones            
+            </li>
+          </a>
+  
+          <a href="proceso.html" target="" class="a-link">
+            <li class="sidebar-list-item">
+                <span class="material-icons-outlined">analytics</span> Proceso
+              </li>
+          </a>
+  
+          <a href="personal.html" target="" class="a-link">
+            <li class="sidebar-list-item">
+                <span class="material-icons-outlined">shopping_cart</span>
+                Personal
+            </li>
+          </a>
+  
+          <a href="reportes.html" target="" class="a-link">
+            <li class="sidebar-list-item">
+                <span class="material-icons-outlined">poll</span> Reportes
+              </li>
+          </a>
+  
+          <a href="configuracion.html" target="" class="a-link">
+            <li class="sidebar-list-item">
+                <span class="material-icons-outlined">settings</span>
+                Configuración
+              </li>
+          </a>
+          </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="charts-card">
+          <h1>Empresa Pichula</h1>
+
+          <div id="bateria">
+            <div id="nivel"></div>
+          </div>
+          <br />
+           <div class="checkbox-wrapper-28">
+            <input id="checklist1" type="checkbox" class="promoted-input-checkbox" onchange="actualizarEstadoChecklist('checklist1', 10);"/>
+            <svg><use xlink:href="#checkmark-28" /></svg>
+            <label for="checklist1">
+              Entrega PDF 1  
+            </label>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark-28" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+          </div>
+          <br />
+           <div class="checkbox-wrapper-28">
+            <input id="checklist2" type="checkbox" class="promoted-input-checkbox" onchange="actualizarEstadoChecklist('checklist2', 10);"/>
+            <svg><use xlink:href="#checkmark-28" /></svg>
+            <label for="checklist2">
+              Entrega Documentos 2  
+            </label>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark-28" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+          </div>
+          <br />
+           <div class="checkbox-wrapper-28">
+            <input id="checklist3" type="checkbox" class="promoted-input-checkbox" onchange="actualizarEstadoChecklist('checklist3', 10);"/>
+            <svg><use xlink:href="#checkmark-28" /></svg>
+            <label for="checklist3">
+              Entrega Certificado 3   
+            </label>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark-28" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+          </div>
+          <br />
+           <div class="checkbox-wrapper-28">
+            <input id="checklist4" type="checkbox" class="promoted-input-checkbox" onchange="actualizarEstadoChecklist('checklist4', 10);"/>
+            <svg><use xlink:href="#checkmark-28" /></svg>
+            <label for="checklist4">
+              Entrega ViH 4   
+            </label>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark-28" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+          </div>
+          <br />
+           <div class="checkbox-wrapper-28">
+            <input id="checklist5" type="checkbox" class="promoted-input-checkbox" onchange="actualizarEstadoChecklist('checklist5', 10);"/>
+            <svg><use xlink:href="#checkmark-28" /></svg>
+            <label for="checklist5">
+              Entrega Covid 5   
+            </label>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="checkmark-28" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+                </path>
+              </symbol>
+            </svg>
+          </div>
+          <button class="button-24" id="boton-activar" onclick="cambiarEstadoCheckboxes()">Desactivar</button>
+          
+
+        </div>
+
+        <div class="charts-card">
+            <div class="container" id = "container1-1">
+              <div class="row bg">
+                <div class="col-12 border text-black">PROCESO CLINICO</div>
+                <div class="col-6 border">Eficiencia y eficacia</div>
+                <div class="col-6 border">asd</div>
+                <div class="col-6 border">Seguridad Asistencial</div>
+                <div class="col-6 border">asd</div>
+                <div class="col-6 border">Centro en el Paciente</div>
+                <div class="col-6 border">asd</div>
+                <div class="col-6 border">Registro Clinico</div>
+                <div class="col-6 border">asd</div>
+              </div>
+            </div>
+       </div>
+
+       <div class="charts-card">
+        <div class="container">
+          <div class="row bg">
+            <div class="col-12 border text-black">PROCESO TÉCNICO: Compatibilidad</div>
+            <div class="col-6 border">Interoperabilidad</div>
+            <div class="col-6 border">asd</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="charts-card">
+      <div class="container">
+        <div class="row bg">
+          <div class="col-12 border text-black">PROCESO TÉCNICO: Usabilidad</div>
+          <div class="col-6 border">Pruebas de usuario</div>
+          <div class="col-6 border">asd</div>
+          <div class="col-6 border">Errores de usuario</div>
+          <div class="col-6 border">asd</div>
+          <div class="col-6 border">Capacidad de Aprendizaje</div>
+          <div class="col-6 border">asd</div>
+          <div class="col-6 border">Accesibilidad</div>
+          <div class="col-6 border">asd</div>
+        </div>
+      </div>
+      </div>
+
+      <div class="charts-card">
+        <div class="container">
+          <div class="row bg">
+            <div class="col-12 border text-black">PROCESO TÉCNICO: Fiabilidad</div>
+            <div class="col-6 border">Eficiecia de desempeño</div>
+            <div class="col-6 border">asd</div>
+            <div class="col-6 border">Tolerancia a fallos</div>
+            <div class="col-6 border">asd</div>
+            <div class="col-6 border">Capacidad de recuperacion</div>
+            <div class="col-6 border">asd</div>
+            <div class="col-6 border">Arquitectura</div>
+            <div class="col-6 border">asd</div>
+            <div class="col-6 border">Otros Aspectos</div>
+            <div class="col-6 border">asd</div>
+          </div>
+        </div>
+      </div>
+
+        <div class="charts-card">
+          <div class="container">
+            <div class="row bg">
+              <div class="col-12 border text-black">PROCESO TÉCNICO: Seguridad</div>
+              <div class="col-6 border">Autenticación</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Autorización</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Criptografia</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Gestión de Contraseñas</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Integridad</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Autenticidad</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Gestion de Riesgo</div>
+              <div class="col-6 border">asd</div>
+              <div class="col-6 border">Documentacion</div>
+              <div class="col-6 border">asd</div>
+            </div>
+          </div>
+        </div>
+
+
+      
+      <!-- End Main -->
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/scripts.js"></script>
+    <script src="../js/bateria.js"></script>
+  </body>
+</html>
